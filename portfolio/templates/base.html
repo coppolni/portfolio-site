@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Coppola Portfolio</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- Social Media Logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/11a12507fc.js" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'portfolio/css/master.css' %}">
+
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand bm-0 h1" href="{% url 'home' %}">Nick Coppola Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarlinks" aria-controls="navbarlinks" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navbarlinks">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="{% url 'skills:myskills' %}">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% static "resume/Nick_Coppola_Resume.pdf" %}" download="Nick_Coppola_Resume.pdf">Resume</a></li>
+      </ul>
+
+
+      <ul class="navbar-nav socialIcons ms-auto">
+        <li class="nav-item github"><a class="nav-link" href="https://github.com/coppolni"><i class="fa fa-fw fa-github"></i>GitHub</a></li>
+        <li class="nav-item twitter"><a class="nav-link" href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+        <li class="nav-item linkedin"><a class="nav-link" href="https://www.linkedin.com/in/nicholas-coppola-13bb9031"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a></li>
+        <li class="nav-item angellist"><a class="nav-link" href="https://angel.co/u/nick-coppola-2"><i class="fa fa-fw fa-angellist"></i>AngelList</a></li>
+      </ul>
+      <button type="button" class="btn btn-dark" name="contact" id="emailbutton"><i class="bi bi-envelope" id="email"></i>Contact Nick</button>
+    </div>
+    </div>
+
+  </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Site footer -->
+  <footer class="site-footer mt-auto">
+    <div class="container">
+      <hr>
+      <ul class="social-icons">
+        <li><a class="githubf" href="https://github.com/coppolni"><i class="fa fa-github"></i></a></li>
+        <li><a class="twitterf" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="linkedinf" href="https://www.linkedin.com/in/nicholas-coppola-13bb9031"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="angellistf" href="https://angel.co/u/nick-coppola-2"><i class="fa fa-angellist"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  </body>
+
+</html>
