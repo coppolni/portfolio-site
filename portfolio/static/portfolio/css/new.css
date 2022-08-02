@@ -1,0 +1,88 @@
+#projects {
+  height: unset;
+  padding-bottom: 5%;
+  padding: 9rem 4.5rem;
+}
+
+.projectstitle {
+  text-align: center;
+}
+
+.projectssubtitle {
+  text-align: center;
+}
+
+.projectsgrid {
+  padding: 2rem 0 4rem;
+}
+
+.threecolumns {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: -0.75rem;
+}
+
+.projectsample {
+  flex: none;
+  width: 33.33%;
+  /* display: block; */
+  padding: 0.75rem;
+}
+
+.projects .projectsgrid figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* .projectimage .image {
+  padding-top: 66.66%;
+} */
+
+.image {
+  display: block;
+  height: 66%;
+  width: 100%;
+}
+
+.projects .projectsgrid figure figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.projects .projectsgrid .overlay,
+.projects .projectsgrid figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .45s ease-in-out;
+}
+
+.projects .projectsgrid figure figcaption h1.projectsamptitle {
+  color: white;
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+}
+
+.projects .projectsgrid .overlay {
+  background-color: #0077b5;
+}
+
+.projects .projectsgrid figure:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.projects .projectsgrid figure:hover .overlay,
+.projects .projectsgrid figure:hover figcaption {
+  opacity: 1;
+}
