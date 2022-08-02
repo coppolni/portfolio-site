@@ -1,24 +1,159 @@
 {% extends "base.html" %}
+{% load static %}
+{% load bootstrap5 %}
 {% block content %}
-<br><br>
-<div class="container mycontainer">
-  <div class="container welcomeheader">
-    <h1 id="welcome">Welcome to My Portfolio!</h1>
-  </div>
-<br>
-<h3>My name is Nick Coppola and I am a self-taught programmer. I created this
-portfolio to document my technical skills and projects, as well as to provide
-a virtual overview of my career.</h3>
-<br>
-<h3>Along with my coding experience, I have over six years of experience working in
-Baseball Operations for three MLB teams.</h3>
-<br>
-<h3 id="parathree">Please check out the links above to see some of my work and to learn more about me!</h3>
+<section id="home">
+    <div class="welcomeheader">
+      <h1 id="welcome"><strong>WELCOME TO MY PORTFOLIO!</strong></h1>
+      <h3>My name is Nick Coppola and I am a self-taught full-stack developer.</h3>
+      <br>
+      <h3>Along with my coding experience, I have over six years of experience working in
+      Baseball Operations for three MLB teams.</h3>
+    </div>
+    <div class="scroll-downs">
+      <div class="mousey">
+        <div class="scroller"></div>
+      </div>
+    </div>
+</section>
 
-<div class="contacttwo">
-  <button id="contactbtn" type="button" class="btn btn-dark" name="contact">Contact Nick<i class="bi bi-arrow-right-circle" id="rightarrow"></i></button>
-</div>
-<br><br><br>
-</div>
+<section id="about" class="sectionpadding">
+  <div class="container aboutsection">
+    <h1 class="abouttitle pb-5"><strong>ABOUT</strong></h1>
+  <div class="aboutcontent">
+    <div class="aboutmain">
+      <h2 class="pb-3 aboutmetitle">About Me</h2>
+      <p class="aboutdetails">My name is Nick Coppola and I am a self-taught programmer. I created this
+      portfolio to document my technical skills and projects, as well as to provide
+      a virtual overview of my career.</p>
+      <p class="aboutdetails">Along with my coding experience, I have over six years of experience working in
+      Baseball Operations for three MLB teams.</p>
+      <p class="aboutdetails">Please check out the links above to see some of my work and to learn more about me!</p>
+      <div class="contacttwo">
+        <button id="contactbtn" type="button" class="btn btn-dark" name="contact">Contact Nick<i class="bi bi-arrow-right-circle" id="rightarrow"></i></button>
+        <button id="resumebtn" type="button" class="btn btn-dark" name="resume"><i class="fa-regular fa-file-pdf" id="pdfresume"></i><a href="{% static "resume/Nick_Coppola_Resume.pdf" %}" download="Nick_Coppola_Resume.pdf" style="text-decoration:none; color:white">Resume</a></button>
+      </div>
+    </div>
+
+    <div class="aboutskills">
+      <h2 class="aboutmetitle">My Skills</h2>
+      <div class="mt-4 p-3 rounded skillslist">
+        <div class="container">
+          <h3><i class="bi bi-window-stack"></i> Frontend</h3>
+        </div>
+        <div class="mt-2 p-2 skill"><i class="fa-brands fa-lg fa-html5" style="color:#FF5733"></i> HTML</div>
+        <div class="mt-2 p-2 skill"><i class="fa-brands fa-lg fa-css3" style="color:#264DE4"></i> CSS</div>
+        <div class="mt-2 p-2 skill"><i class="fa-brands fa-lg fa-square-js" style="color:#F0DB4F"></i> JS</div>
+        <div class="mt-2 p-2 skill"><i class="fa-brands fa-lg fa-bootstrap" style="color:#563D7C"></i> Bootstrap</div>
+        <div class="mt-2 p-2 skill"><i class="bi bi-currency-dollar" style="color:#0769AD"></i> jQuery</div>
+      </div>
+      <div class="mt-4 p-3 rounded skillslist">
+        <div class="container">
+          <h3><i class="fa-solid fa-md fa-server"></i> Backend</h3>
+        </div>
+        <div class="mt-2 p-2 skill"><i class="fa-brands fa-lg fa-python" style="color:#4B8BBE"></i> Python</div>
+        <div class="mt-2 p-2 skill"><i class="fa-brands fa-lg fa-python" style="color:#092E20"></i> Django</div>
+        <div class="mt-2 p-2 skill"><i class="fa-solid fa-lg fa-database" style="color:#37A0E6"></i> SQL</div>
+      </div>
+      <div class="mt-4 p-3 rounded skillslist">
+        <div class="container">
+          <h3><i class="fa-solid fa-md fa-circle-info"></i> Other</h3>
+        </div>
+        <div class="mt-2 p-2 skill"><i class="fa-solid fa-lg fa-file-excel" style="color:#1D6F42"></i> Excel</div>
+        <div class="mt-2 p-2 skill"><i class="fa-solid fa-lg fa-file-powerpoint" style="color:#D04423"></i> PowerPoint</div>
+        <div class="mt-2 p-2 skill"><i class="fa-solid fa-lg fa-chart-line"></i> Data Analysis</div>
+        <div class="mt-2 p-2 skill"><i class="fa-solid fa-lg fa-chart-pie"></i> Statistics</div>
+        <div class="mt-2 p-2 skill"><i class="fa-solid fa-lg fa-gavel"></i> Arbitration</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section id="projects" class="sectionpadding projects-section">
+  <div class="container projects-div">
+    <h1 class="projects-title"><strong>PROJECTS</strong></h1>
+    <h4 class="projects-subtitle">Below is a sample of some recent projects I have worked on.</h4>
+    <h4 class="projects-subtitle">Please email me for more info or if you'd just like to connect!</h4>
+
+    <div class="projects-grid">
+        <div class="project-example">
+          <figure class="project-figure">
+            <img class="project-image" src="/static/images/ScoutGirlReport.jpg" alt="">
+            <figcaption>
+              <h1 class="project-title">Baseball scouting and analytics blog.</h1>
+              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+            </figcaption>
+          <div class="overlay"></div>
+          </figure>
+        </div>
+        <div class="project-example">
+          <figure class="project-figure">
+            <img class="project-image" src="/static/images/Star_Social.jpg" alt="">
+            <figcaption>
+              <h1 class="project-title">Multi-user social media clone, similar to Reddit.</h1>
+              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+            </figcaption>
+          <div class="overlay"></div>
+          </figure>
+        </div>
+        <div class="project-example">
+          <figure class="project-figure">
+            <img class="project-image" src="/static/images/Blog2.jpg" alt="">
+            <figcaption>
+              <h1 class="project-title">Single-user blog skeleton.</h1>
+              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+            </figcaption>
+          <div class="overlay"></div>
+          </figure>
+        </div>
+        <div class="project-example">
+          <figure class="project-figure">
+            <img class="project-image" src="/static/images/College_Dashboard.jpg" alt="">
+            <figcaption>
+              <h1 class="project-title">Internal analytics and player development site for a college baseball team.</h1>
+              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+            </figcaption>
+          <div class="overlay"></div>
+          </figure>
+        </div>
+        <div class="project-example">
+          <figure class="project-figure">
+            <img class="project-image" src="/static/images/Prospects_Blog.jpg" alt="">
+            <figcaption>
+              <h1 class="project-title">MLB team blog. Prospect rankings and scouting portal, transaction hub, 40-man roster info, org rosters, and more.</h1>
+              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+            </figcaption>
+          <div class="overlay"></div>
+          </figure>
+        </div>
+        <div class="project-example">
+          <figure class="project-figure">
+            <img class="project-image" src="/static/images/Python_Projects.jpg" alt="">
+            <figcaption>
+              <h1 class="project-title">Link to additional Python projects.</h1>
+              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+            </figcaption>
+          <div class="overlay"></div>
+          </figure>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="sectionpadding">
+  <div class="container contactsection">
+    <h1 class="abouttitle pb-5"><strong>CONTACT</strong></h1>
+    <form class="" action="index.html" method="post">
+      {% csrf_token %}
+      {# {% bootstrap_form form %} #}
+      <label for="">Name</label><input type="text" name="" value="Enter Your Name">
+      <label for="">Email</label><input type="email" name="" value="Enter Your Email">
+      <label for="">Message</label><input type="text" name="" value="Enter Your Message">
+      <input type="submit" name="btn btn-default" value="Submit">
+    </form>
+  </div>
+</section>
 
 {% endblock %}
