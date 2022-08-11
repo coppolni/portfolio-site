@@ -1,0 +1,235 @@
+/* PROJECTS - WELCOME */
+#proj-portfolio {
+  background-image: url('/static/images/Index_Background.jpg');
+  background-size: cover;
+  /* height: 80%; */
+  height: 80vh;
+  /* display: flex; */
+  padding-top: 80px;
+}
+
+.proj-background {
+  /* background-image: url('/static/images/Index_Background.jpg'); */
+}
+
+#proj-welcome {
+  font-size: 4rem;
+  letter-spacing: 1px;
+  margin-bottom: 3%;
+}
+
+.proj-welcome {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* .proj-welcome {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  justify-content: center;
+  align-items: center;
+} */
+
+#developbtn {
+  padding-left: 2%;
+  padding-right: 2%;
+  background: #26272b;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 50px;
+  border-color: inherit;
+}
+
+.develop-logo {
+  margin-right: 0;
+}
+
+#developbtn:hover {
+  background-color: #0077b5;
+  transition: 0.5s;
+}
+
+/* PROJECTS - DETAILS */
+#proj-portfolio-details {
+  height: unset;
+}
+
+.carousel {
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 12px 12px 12px 12px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.proj-details-text {
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 1.4rem;
+}
+
+.proj-details-text h3 {
+  margin-bottom: 3%;
+}
+
+.proj-details-tools-head {
+  text-align: center;
+}
+
+.proj-details-tools {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: -5%;
+  margin-right: -5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  border: 2px solid black;
+  border-radius: 12px;
+  background: #0077b5;
+  color: white;
+}
+
+.proj-details-more {
+  margin-bottom: 10%;
+}
+
+#githubbtn-proj {
+  padding-left: 4%;
+  padding-right: 4%;
+  background: #26272b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 50px;
+  border-color: inherit;
+}
+
+#githubbtn-proj:hover {
+  background-color: #0077b5;
+  transition: 0.5s;
+}
+
+#backbtn {
+  padding-left: 5%;
+  padding-right: 5%;
+  background: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 50px;
+  border-color: #26272b;
+  color: #26272b;
+  font-weight: bold;
+}
+
+#backbtn:hover {
+  background-color: #0077b5;
+  transition: 0.5s;
+  color: white;
+}
+#scoutgirlbtn {
+  padding-left: 5%;
+  padding-right: 5%;
+  background: #26272b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 50px;
+  border-color: inherit;
+}
+
+#scoutgirlbtn:hover {
+  background-color: #0077b5;
+  transition: 0.5s;
+}
+
+
+
+
+
+/* DEVICE DISPLAY BREAKPOINTS / RESPONSIVE */
+/* for extra large devices */
+@media only screen
+  and (min-width: 1200px) {
+  /* .socialIcons {
+    display: none;
+  } */
+}
+
+/* for large devices (desktops/desktops) */
+@media only screen
+  and (min-width: 992px)
+  and (max-width: 1199px) {
+  /* .socialIcons {
+    display: none;
+  } */
+}
+
+/* for large tablets */
+@media only screen
+  and (min-width: 768px)
+  and (max-width: 991px) {
+  /* .socialIcons {
+    display: none;
+  } */
+  .proj-details-tools {
+    font-size: 1.3rem;
+    display: grid;
+    grid-gap: 2rem;
+  }
+
+}
+
+/* for smaller tablets */
+@media only screen
+  and (min-width: 481px)
+  and (max-width: 767px) {
+    .proj-details-tools {
+      font-size: 1.0rem;
+      display: grid;
+      grid-gap: 2rem;
+    }
+}
+
+/* for cellphones */
+@media only screen
+  and (max-width: 480px) {
+    #proj-welcome {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 3%;
+    }
+
+    .proj-details-text {
+      font-size: 1.0rem;
+    }
+
+    .proj-details-tools {
+      font-size: 0.8rem;
+      display: grid;
+      grid-gap: 1rem;
+    }
+    .proj-details-more {
+      margin-left: -5%;
+      margin-right: -5%;
+    }
+}
+
+/* hide social icons */
+@media only screen
+  and (max-width: 300px) {
+    .socialIcons {
+      display: none;
+    }
+}

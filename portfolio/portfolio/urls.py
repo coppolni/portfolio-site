@@ -20,5 +20,8 @@ from portfolio import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.HomePage.as_view(),name='home'),
-    path('skills/',include('skills.urls',namespace='skills')),
+    # path('#contact/',views.contact,name='contact'),
+    path('thanks/',views.ThanksPage.as_view(),name='thanks'),
+    path('attributions/',views.AttributionsPage.as_view(),name='attributions'),
+    path('projects/',include('projects.urls',namespace='projects')), 
 ]

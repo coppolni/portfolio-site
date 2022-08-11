@@ -5,10 +5,7 @@
 <section id="home">
     <div class="welcomeheader">
       <h1 id="welcome"><strong>WELCOME TO MY PORTFOLIO!</strong></h1>
-      <h3>My name is Nick Coppola and I am a self-taught full-stack developer.</h3>
-      <br>
-      <h3>Along with my coding experience, I have over six years of experience working in
-      Baseball Operations for three MLB teams.</h3>
+      <h3>My name is Nick Coppola and I am a data analyst and full-stack developer.</h3>
     </div>
     <div class="scroll-downs">
       <div class="mousey">
@@ -23,15 +20,17 @@
   <div class="aboutcontent">
     <div class="aboutmain">
       <h2 class="pb-3 aboutmetitle">About Me</h2>
-      <p class="aboutdetails">My name is Nick Coppola and I am a self-taught programmer. I created this
+      <p class="aboutdetails">My name is Nick Coppola and I am a <span id="aboutbold"><strong>self-taught programmer</strong></span>. I created this
       portfolio to document my technical skills and projects, as well as to provide
-      a virtual overview of my career.</p>
+      a virtual overview of my career. Check out some of my work in the <span id="aboutbold"><strong>Projects</strong></span> section.</p>
       <p class="aboutdetails">Along with my coding experience, I have over six years of experience working in
       Baseball Operations for three MLB teams.</p>
-      <p class="aboutdetails">Please check out the links above to see some of my work and to learn more about me!</p>
+      <p class="aboutdetails">I'm open to <span id="aboutbold"><strong>job opportunities</strong></span> where I can contribute, learn and grow. If you have
+      a good opportunity that matches my skills and experience, please reach out.</p>
       <div class="contacttwo">
-        <button id="contactbtn" type="button" class="btn btn-dark" name="contact">Contact Nick<i class="bi bi-arrow-right-circle" id="rightarrow"></i></button>
-        <button id="resumebtn" type="button" class="btn btn-dark" name="resume"><i class="fa-regular fa-file-pdf" id="pdfresume"></i><a href="{% static "resume/Nick_Coppola_Resume.pdf" %}" download="Nick_Coppola_Resume.pdf" style="text-decoration:none; color:white">Resume</a></button>
+        <a href="#contact"><button id="contactbtn" type="button" class="btn btn-primary" name="contact">Contact Nick<i class="bi bi-arrow-right-circle" id="rightarrow"></i></button></a>
+        {# <button id="resumebtn" type="button" class="btn btn-dark" name="resume"><i class="fa-regular fa-file-pdf" id="pdfresume"></i><a href="{% static "resume/Nick_Coppola_Resume.pdf" %}" download="Nick_Coppola_Resume.pdf" style="text-decoration:none; color:white">Resume</a></button> #}
+        <button id="resumebtn" type="button" class="btn btn-primary" name="resume"><i class="fa-regular fa-file-pdf" id="pdfresume"></i><a href="{% static "resume/Nick_Coppola_Resume.pdf" %}" style="text-decoration:none; color:white" target="_blank" rel="noreferrer noopener">Resume</a></button>
       </div>
     </div>
 
@@ -72,27 +71,17 @@
 
 <section id="projects" class="sectionpadding projects-section">
   <div class="container projects-div">
-    <h1 class="projects-title"><strong>PROJECTS</strong></h1>
-    <h4 class="projects-subtitle">Below is a sample of some recent projects I have worked on.</h4>
-    <h4 class="projects-subtitle">Please email me for more info or if you'd just like to connect!</h4>
+    <h1 class="projects-title mb-3"><strong>PROJECTS</strong></h1>
+    <h4 class="projects-subtitle">Below is a sample of some recent projects I have worked on, as well as additional projects in development.</h4>
+    <h4 class="projects-subtitle">Please <span><a href="mailto:nick.coppola2010@gmail.com">email me</a></span> for more info or if you'd just like to connect!</h4>
 
     <div class="projects-grid">
         <div class="project-example">
           <figure class="project-figure">
-            <img class="project-image" src="/static/images/ScoutGirlReport.jpg" alt="">
+            <img class="project-image" src="/static/images/Portfolio.jpg" alt="">
             <figcaption>
-              <h1 class="project-title">Baseball scouting and analytics blog.</h1>
-              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
-            </figcaption>
-          <div class="overlay"></div>
-          </figure>
-        </div>
-        <div class="project-example">
-          <figure class="project-figure">
-            <img class="project-image" src="/static/images/Star_Social.jpg" alt="">
-            <figcaption>
-              <h1 class="project-title">Multi-user social media clone, similar to Reddit.</h1>
-              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+              <h1 class="project-title">Details on this portfolio.</h1>
+              <a class="button project-button" href="{% url 'projects:myportfolio' %}">Learn More<i class="fa-solid fa-angle-right"></i></a>
             </figcaption>
           <div class="overlay"></div>
           </figure>
@@ -102,7 +91,27 @@
             <img class="project-image" src="/static/images/Blog2.jpg" alt="">
             <figcaption>
               <h1 class="project-title">Single-user blog skeleton.</h1>
-              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+              <a class="button project-button" href="{% url 'projects:singleblog' %}">Learn More<i class="fa-solid fa-angle-right"></i></a>
+            </figcaption>
+          <div class="overlay"></div>
+          </figure>
+        </div>
+        <div class="project-example">
+          <figure class="project-figure">
+            <img class="project-image" src="/static/images/Star_Social.jpg" alt="">
+            <figcaption>
+              <h1 class="project-title">Multi-user social media clone.</h1>
+              <a class="button project-button" href="{% url 'projects:starsocial' %}">Learn More<i class="fa-solid fa-angle-right"></i></a>
+            </figcaption>
+          <div class="overlay"></div>
+          </figure>
+        </div>
+        <div class="project-example">
+          <figure class="project-figure">
+            <img class="project-image" src="/static/images/Scout_Girl_Report.jpg" alt="">
+            <figcaption>
+              <h1 class="project-title">Baseball scouting and analytics blog.</h1>
+              <a class="button project-button" href="{% url 'projects:scoutgirl' %}">Learn More<i class="fa-solid fa-angle-right"></i></a>
             </figcaption>
           <div class="overlay"></div>
           </figure>
@@ -112,7 +121,8 @@
             <img class="project-image" src="/static/images/College_Dashboard.jpg" alt="">
             <figcaption>
               <h1 class="project-title">Internal analytics and player development site for a college baseball team.</h1>
-              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+              {# <a class="button project-button" href="{% url 'projects:collegedashboard' %}"><i class="fa-solid fa-code-branch"></i>In Development</a> #}
+              <a class="button project-button" href="{% url 'projects:collegedashboard' %}">Learn More<i class="fa-solid fa-angle-right"></i></a>
             </figcaption>
           <div class="overlay"></div>
           </figure>
@@ -121,37 +131,45 @@
           <figure class="project-figure">
             <img class="project-image" src="/static/images/Prospects_Blog.jpg" alt="">
             <figcaption>
-              <h1 class="project-title">MLB team blog. Prospect rankings and scouting portal, transaction hub, 40-man roster info, org rosters, and more.</h1>
-              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
+              <h1 class="project-title">Prospect rankings and scouting portal, transaction hub, 40-man roster info, org rosters, and more.</h1>
+              {# <a class="button project-button" href="{% url 'projects:prospectsblog' %}"><i class="fa-solid fa-code-branch"></i>In Development</a> #}
+              <a class="button project-button" href="{% url 'projects:prospectsblog' %}">Learn More<i class="fa-solid fa-angle-right"></i></a>
             </figcaption>
           <div class="overlay"></div>
           </figure>
         </div>
-        <div class="project-example">
-          <figure class="project-figure">
-            <img class="project-image" src="/static/images/Python_Projects.jpg" alt="">
-            <figcaption>
-              <h1 class="project-title">Link to additional Python projects.</h1>
-              <a class="button project-button" href="#">Visit Website<i class="fa-solid fa-angle-right"></i></a>
-            </figcaption>
-          <div class="overlay"></div>
-          </figure>
         </div>
-    </div>
-
-  </div>
+          <a href="https://github.com/coppolni" target="_blank" rel="noreferrer noopener"><button id="githubbtn" type="button" class="btn btn-primary" name="github"><i class="fa fa-github" id="github-logo"></i>See more on GitHub</button></a>
+        </div>
 </section>
 
 <section id="contact" class="sectionpadding">
-  <div class="container contactsection">
-    <h1 class="abouttitle pb-5"><strong>CONTACT</strong></h1>
-    <form class="" action="index.html" method="post">
+  <div class="container contact-section">
+    <h1 class="contact-title mb-3"><strong>CONTACT</strong></h1>
+    <h4 class="contact-subtitle">For inquries or just to connect, feel free to message me below! </h4>
+    <form action="{% url 'home' %}" method="POST">
       {% csrf_token %}
       {# {% bootstrap_form form %} #}
-      <label for="">Name</label><input type="text" name="" value="Enter Your Name">
-      <label for="">Email</label><input type="email" name="" value="Enter Your Email">
-      <label for="">Message</label><input type="text" name="" value="Enter Your Message">
-      <input type="submit" name="btn btn-default" value="Submit">
+      <div class="mt-4 p-4 pb-5 rounded contact-background">
+        <div class="mb-3">
+          <label for="contact_name" class="form-label">Name</label>
+          <input type="text" class="form-control form-control-lg" id="contactname" name="message-name" placeholder="Enter Your Name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="contact_email" class="form-label">Email</label>
+          <input type="email" class="form-control form-control-lg" id="contactemail" name="message-email" placeholder="Enter Your Email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="contact_message" class="form-label">Message</label>
+          <textarea class="form-control form-control-lg" id="contactmessage" name="message" rows="10" placeholder="Enter Your Message"></textarea>
+        </div>
+
+        <div class="mt-3 pb-3">
+          <input type="submit" name="btn btn-default" id="contactsubmit" value="Submit">
+        </div>
+      </div>
     </form>
   </div>
 </section>
