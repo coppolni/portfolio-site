@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="proj-portfolio">
+  <div class="container proj-welcome">
+    <h1 id="proj-welcome"><strong>SINGLE-USER BLOG</strong></h1>
+    <h3 class="mb-4">This blog skeleton was one of the first sites I created with Django.
+      The user can post blogs and edit their posts with the Medium Editor.</h3>
+    <h3 class="mb-4">See below for more info!</h3>
+    <a href="https://github.com/coppolni" target="_blank" rel="noreferrer noopener"><button id="githubbtn" type="button" class="btn btn-primary" name="github"><i class="fa fa-github" id="github-logo"></i>Access on GitHub</button></a>
+  </div>
+</section>
+
+<section id="proj-portfolio-details">
+  <div class="container proj-details">
+    <!-- Carousel -->
+<div id="proj-carousel" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#proj-carousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#proj-carousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#proj-carousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/images/carousel/Single-User_One.jpg" alt="" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/carousel/Single-User_Two.jpg" alt="" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/carousel/Single-User_Three.jpg" alt="" class="d-block w-100">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#proj-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#proj-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+  <div class="proj-details-text">
+    <h3><strong>Single-User Blog</strong></h3>
+    <p>This simple blog allows the user to create blog posts and make edits
+    using the <span><a href="https://github.com/yabwe/medium-editor" target="_blank" rel="noreferrer noopener">Medium Editor</a></span>.
+    Registered users can comment on blog posts with approval of the blog owner.</p>
+    <p>A few key features of this blog are below, along with additional tools used.</p>
+    <p>Please visit my GitHub for access to this repository and more.</p>
+  <div class="proj-details-tools">
+    <div class="proj-details-features">
+      <h3 class="proj-details-tools-head">Features</h3>
+      <ul>
+        <li>Simple design</li>
+        <li>Medium Editor</li>
+        <li>Comment approval</li>
+      </ul>
+    </div>
+    <div class="proj-details-devtools">
+      <h3 class="proj-details-tools-head">Dev Tools</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript, Bootstrap</li>
+        <li>Python - Django Framework</li>
+        <li>Git, GitHub, Atom</li>
+      </ul>
+    </div>
+  </div>
+  <div class="proj-details-more">
+    <h3 class="mb-4">More Info</h3>
+    <a href="https://github.com/coppolni" target="_blank" rel="noreferrer noopener"><button id="githubbtn-proj" type="button" class="btn btn-primary" name="github"><i class="fa fa-github" id="github-logo"></i>GitHub</button></a>
+    <a href="/#projects"><button id="backbtn" type="button" class="btn btn-primary" name="back">Go Back</button></a>
+  </div>
+  </div>
+
+  </div>
+
+</section>
+
+{% endblock %}

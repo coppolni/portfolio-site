@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="thanks">
+    <h1>Thanks {{ message_name }}!</h1>
+    <h3>I have received your email and will get back to you shortly...</h3>
+    <a href="{% url 'home' %}"><button id="thanksbtn" type="button" class="btn btn-dark" name="thanks">Return Home<i class="bi bi-arrow-right-circle" id="rightarrow"></i></button></a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="proj-portfolio">
+  <div class="container proj-welcome">
+    <h1 id="proj-welcome"><strong>SCOUT GIRL REPORT</strong></h1>
+    <h3 class="mb-4">A baseball blog founded in 2020 discussing all things baseball,
+    including player and team analytics. Current site created by Andrea Arcadipane.
+    Updated site in development.</h3>
+    <h3 class="mb-4">See below for more info!</h3>
+    <button id="developbtn" type="button" class="btn btn-primary" name="develop"><i class="fa-solid fa-code-branch develop-logo"></i> In Development</button>
+  </div>
+</section>
+
+<section id="proj-portfolio-details">
+  <div class="container proj-details">
+    <!-- Carousel -->
+<div id="proj-carousel" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#proj-carousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#proj-carousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#proj-carousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/images/carousel/ScoutGirl_One.jpg" alt="" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/carousel/ScoutGirl_Two.jpg" alt="" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/carousel/ScoutGirl_Three.jpg" alt="" class="d-block w-100">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#proj-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#proj-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+  <div class="proj-details-text">
+    <h3><strong>Scout Girl Report</strong></h3>
+    <h3 class="mb-5">**IN DEVELOPMENT**</h3>
+  <div class="proj-details-more">
+    <h3 class="mb-4">More Info</h3>
+    <a href="https://scoutgirlreport.com/" target="_blank" rel="noreferrer noopener"><button id="scoutgirlbtn" type="button" class="btn btn-primary" name="github">Website</button></a>
+    <a href="/#projects"><button id="backbtn" type="button" class="btn btn-primary" name="back">Go Back</button></a>
+  </div>
+  </div>
+
+  </div>
+
+</section>
+
+{% endblock %}
