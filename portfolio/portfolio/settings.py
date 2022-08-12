@@ -33,7 +33,7 @@ with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
 DEBUG = False
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nickcoppola.herokuapp.com/', '127.0.0.1:8000']
 
 
 # Application definition
